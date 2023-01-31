@@ -29,10 +29,10 @@ In this tutorial, we will practice setting up different file permissions and acc
 <h2>Actions and Observations</h2>
 
 <p>
-<img src="https://imgur.com/OBFtOuo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/grudDxG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 1: Remote Desktop into both VMs that were used in the previous lab (DC-1 & Client-1). These are the subject VMs that will be used again for this lab with DC-1 being the Domain Controller once again. 
+First Remote Desktop into both VMs that were used in the previous lab (DC-1 & Client-1). These are the subject VMs that will be used again for this lab with DC-1 being the Domain Controller once again. 
 </p>
 <br />
 
@@ -41,7 +41,7 @@ Step 1: Remote Desktop into both VMs that were used in the previous lab (DC-1 & 
 <img src="https://imgur.com/Ar3Paox.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 2: Create four folders on DC-1's C: drive all with different access permissions: "read-access" - permission: read, "write-access" - permission read/write", "no-access" - permission none, "accounting" - permission read/write.
+Then create four folders on DC-1's C: drive all with different access permissions: "read-access" - permission: read, "write-access" - permission read/write", "no-access" - permission none, "accounting" - permission read/write.
 </p>
 <br />
 
@@ -49,7 +49,7 @@ Step 2: Create four folders on DC-1's C: drive all with different access permiss
 <img src="https://imgur.com/y5byjxa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 3: Log into a random employee account on Client-1 to test the newly added permissions/access created in step #2. Type "\\dc-1" into file explorer to show all shared folders created on the domain in step #2. Next, click any of the created shared folders and try to perfrom an action that does not align with the permissions used for said folder. You should not be allowed to open the folder titled "no-access" or write in the folder titled "read-access", etc.
+Log into a random employee account on Client-1 to test the newly added permissions/access created in step #2. Type "\\dc-1" into file explorer to show all shared folders created on the domain in step #2. Next, click any of the created shared folders and try to perfrom an action that does not align with the permissions used for said folder. You should not be allowed to open the folder titled "no-access" or write in the folder titled "read-access", etc.
 </p>
 <br />
 
@@ -57,7 +57,7 @@ Step 3: Log into a random employee account on Client-1 to test the newly added p
 <img src="https://imgur.com/xSXLxLo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 4: Create an "Organizational Unit" (OU) in Active Directory on DC-1 titled "Security Group". Next, create a new group within the OU titled "Accountants". Add Client-1's account to the list of "Accountant" members in the group (this will give the client-1 account access to the shared accountant folder created earlier).
+Create an "Organizational Unit" (OU) in Active Directory on DC-1 titled "Security Group". Next, create a new group within the OU titled "Accountants". Add Client-1's account to the list of "Accountant" members in the group (this will give the client-1 account access to the shared accountant folder created earlier).
 </p>
 <br />
 
@@ -65,6 +65,6 @@ Step 4: Create an "Organizational Unit" (OU) in Active Directory on DC-1 titled 
 <img src="https://imgur.com/FLEB0F4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 5: Restart Client-1 to allow the new permission settings to enable. Next access the shared "accountant" folder in \\dc-1  to verify access was successfully set up and granted for this user/employee. This is the conclusion of the lab.
+Restart Client-1 to allow the new permission settings to enable. Next access the shared "accountant" folder in \\dc-1  to verify access was successfully set up and granted for this user/employee. This is the conclusion of the lab.
 </p>
 <br />
